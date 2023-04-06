@@ -1,18 +1,23 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { AQIIndex } from "@/types/aqi";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { TStationContext } from "@/types/aqi";
 import { getIcon } from "./Icons";
 import { getColor } from "@/services/aqi";
 import { formatDate } from "@/services/date";
+import { useStationsContext } from "@/contexts/Stations";
+import { useEffect } from "react";
 
-export default function Map({ stations }: { stations: AQIIndex[] }) {
+export default function Map() {
+  const { stations } = useStationsContext() as TStationContext;
+
   return (
     <MapContainer
-      className="h-full w-full"
+      className="fixed h-full w-full"
       center={[13.736717, 100.523186]}
       zoom={13}
       zoomControl={true}
       scrollWheelZoom={true}
     >
+      <ZoomTo />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -54,4 +59,23 @@ export default function Map({ stations }: { stations: AQIIndex[] }) {
       </>
     </MapContainer>
   );
+}
+
+function ZoomTo() {
+  const map = useMap();
+  const { selectedStation } = useStationsContext() as TStationContext;
+
+  useEffect(() => {
+    if (!selectedStation) return;
+
+    map.flyTo(
+      [
+        parseFloat(selectedStation.Latitude),
+        parseFloat(selectedStation.Longitude),
+      ],
+      15 // number of zoom
+    );
+  }, [selectedStation]);
+
+  return null;
 }

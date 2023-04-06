@@ -29,3 +29,9 @@ export interface AQIIndex {
   aqi_img: string;
   aqi_text: string;
 }
+
+export interface TStationContext {
+  stations: AQIIndex[];
+  selectedStation: AQIIndex | null;
+  setSelectedStation: (station: AQIIndex) => void;
+}

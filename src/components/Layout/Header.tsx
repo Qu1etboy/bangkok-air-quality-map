@@ -1,11 +1,11 @@
 import { AQIIndex } from "@/types/aqi";
 import OffCanvas from "./OffCanvas";
 
-export default function Header({ stations }: { stations: AQIIndex[] }) {
+export default function Header() {
   return (
     <header className="fixed z-10 flex w-full items-center justify-between bg-white px-5 py-3 drop-shadow-md">
       <section className="flex items-center gap-5">
-        <OffCanvas stations={stations} />
+        <OffCanvas />
         <h1 className="text-3xl font-bold">Bangkok Air Quality Map</h1>
       </section>
       <form className="flex w-96">
@@ -20,9 +20,9 @@ export default function Header({ stations }: { stations: AQIIndex[] }) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </div>
