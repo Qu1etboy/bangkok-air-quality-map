@@ -1,14 +1,15 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
 import Map from "../components/Map";
 import Layout from "../components/Layout";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Layout/Header";
+import { useAQI } from "@/hooks/useAQI";
 
 export default function Home() {
+  const stations = useAQI();
+
   return (
     <Layout>
-      <Map />
+      <Header stations={stations} />
+      <Map stations={stations} />
     </Layout>
   );
 }

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Layout(props) {
+export default function Layout(props: any) {
   const meta = {
     title: "Bangkok Air Quality Map",
     description: "Shows the air quality on a map in Bangkok.",
@@ -15,7 +15,7 @@ export default function Layout(props) {
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content={meta.author} />
