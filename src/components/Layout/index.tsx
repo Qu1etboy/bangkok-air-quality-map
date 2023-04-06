@@ -31,9 +31,9 @@ export default function Layout(props: any) {
         <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`h-screen w-full ${props.className}`}>
+      <div className={`h-screen w-full ${props.className}`}>
         {props.children}
-      </main>
+      </div>
     </>
   );
 }
