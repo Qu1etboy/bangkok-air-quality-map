@@ -2,6 +2,8 @@
 
 Shows the air quality on a map in Bangkok.
 
+![](./docs/assets/preview.png)
+
 ## Tools used
 
 - Next.js
