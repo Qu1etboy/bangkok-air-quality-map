@@ -19,7 +19,7 @@ export default function Map() {
     >
       <ZoomTo />
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Made with 🖤 by <a href="https://qu1etboy.dev">Qu1etboy</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <>
