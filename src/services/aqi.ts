@@ -9,6 +9,6 @@ export function getColor(text: string) {
     case "มีผลกระทบต่อสุขภาพ":
       return "text-red-500";
     default:
-      return "";
+      return "text-blue-500";
   }
 }

@@ -13,6 +13,7 @@ export interface AQIIndex {
   Province: string;
   LastData: string;
   ThaiCode: string;
+  groupid: string;
   groupname: string;
   groupname_en: string;
   status: string;
@@ -34,4 +35,9 @@ export interface TStationContext {
   stations: AQIIndex[];
   selectedStation: AQIIndex | null;
   setSelectedStation: (station: AQIIndex) => void;
+  handleFilterStation: (filterer: (station: AQIIndex) => boolean) => void;
+  // use for filtering
+  setQuality: (quatity: string) => void;
+  setGroupId: (groupId: string) => void;
+  setText: (text: string) => void;
 }

@@ -68,11 +68,12 @@ function ZoomTo() {
   useEffect(() => {
     if (!selectedStation) return;
 
+    const lat = parseFloat(selectedStation.Latitude);
+    const lon = parseFloat(selectedStation.Longitude);
+
+    if (!lat || !lon) return;
     map.flyTo(
-      [
-        parseFloat(selectedStation.Latitude),
-        parseFloat(selectedStation.Longitude),
-      ],
+      [lat, lon],
       15 // number of zoom
     );
   }, [selectedStation]);

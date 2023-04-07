@@ -3,6 +3,8 @@ import { getColor } from "@/services/aqi";
 import { formatDate } from "@/services/date";
 import { AQIIndex, TStationContext } from "@/types/aqi";
 import { useState } from "react";
+import Filter from "../Form/Filter";
+import SearchInput from "../Form/SearchInput";
 
 export default function OffCanvas() {
   const [isOpen, setOpen] = useState(false);
@@ -32,9 +34,10 @@ export default function OffCanvas() {
         </svg>
       </button>
       {isOpen && (
-        <div className="fixed left-0 top-0 flex h-screen w-96 flex-col bg-white">
-          <div className="w-full px-3 py-2">
-            <button className="right-0 m-3" onClick={() => setOpen(false)}>
+        <div className="fixed left-0 top-0 z-20 flex h-screen w-96 flex-col bg-white">
+          <div className="flex w-full items-center justify-between px-3 py-2 shadow-sm">
+            <h2 className="text-xl font-bold">Bangkok Air Quality</h2>
+            <button className="m-3" onClick={() => setOpen(false)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -47,11 +50,15 @@ export default function OffCanvas() {
               </svg>
             </button>
           </div>
-          <div className="overflow-y-auto">
+          <div className="overflow-y-auto pt-3">
             <h2 className="mx-3 text-3xl font-bold text-green-800">
               รายงานสถานการณ์
             </h2>
             <h2 className="mx-3 mb-5 text-3xl text-green-700">คุณภาพอากาศ</h2>
+            <section className="border-b pb-5">
+              <SearchInput />
+              <Filter />
+            </section>
             {stations.map((station) => (
               <button
                 key={crypto.randomUUID()}
