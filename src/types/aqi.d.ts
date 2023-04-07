@@ -33,6 +33,8 @@ export interface AQIIndex {
 
 export interface TStationContext {
   stations: AQIIndex[];
+  isLoading: boolean;
+  isError: boolean;
   selectedStation: AQIIndex | null;
   setSelectedStation: (station: AQIIndex) => void;
   handleFilterStation: (filterer: (station: AQIIndex) => boolean) => void;

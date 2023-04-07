@@ -11,7 +11,7 @@ export default function StationsProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const stations = useAQI();
+  const { stations, isLoading, isError } = useAQI();
   const [filteredStations, setFilteredStations] =
     useState<AQIIndex[]>(stations);
   const [selectedStation, setSelectedStation] = useState<AQIIndex | null>(null);
@@ -44,6 +44,8 @@ export default function StationsProvider({
     <StationsContext.Provider
       value={{
         stations: filteredStations,
+        isLoading,
+        isError,
         selectedStation,
         setSelectedStation,
         handleFilterStation,

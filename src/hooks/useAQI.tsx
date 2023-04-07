@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 export function useAQI() {
   const [stations, setStations] = useState<AQIIndex[]>([]);
+  const [isLoading, setLoading] = useState<boolean>(true);
+  const [isError, setError] = useState<boolean>(false);
 
   useEffect(() => {
     async function getData() {
@@ -25,16 +27,19 @@ export function useAQI() {
 
             return data.arrStation;
           } catch (err) {
+            setLoading(false);
+            setError(true);
             throw new Error("There was an error. Please try again");
           }
         })
       );
 
       setStations([...results[0], ...results[1], ...results[2]]);
+      setLoading(false);
     }
 
     getData();
   }, []);
 
-  return stations;
+  return { stations, isLoading, isError };
 }

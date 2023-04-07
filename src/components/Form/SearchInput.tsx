@@ -41,7 +41,7 @@ export default function SearchInput() {
           placeholder="ค้นหาตามเขต..."
         />
       </div>
-      <button className="ml-2 rounded-lg border border-blue-700 bg-blue-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
+      <button className="ml-2 rounded-lg border border-green-700 bg-green-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
         ค้นหา
       </button>
     </form>
