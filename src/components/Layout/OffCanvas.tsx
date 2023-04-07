@@ -55,9 +55,10 @@ export default function OffCanvas() {
               รายงานสถานการณ์
             </h2>
             <h2 className="mx-3 mb-5 text-3xl text-green-700">คุณภาพอากาศ</h2>
-            <section className="border-b pb-5">
+            <section className="mx-3 border-b pb-2">
               <SearchInput />
               <Filter />
+              <p className="mt-5">ทั้งหมด {stations.length} สถานี</p>
             </section>
             {stations.map((station) => (
               <button

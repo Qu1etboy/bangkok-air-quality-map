@@ -15,7 +15,7 @@ export default function SearchInput() {
   }
 
   return (
-    <form className="mx-3 flex" onSubmit={handleSubmit}>
+    <form className="flex" onSubmit={handleSubmit}>
       <label className="sr-only">ค้นหาตามเขต</label>
       <div className="relative h-full w-full">
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">

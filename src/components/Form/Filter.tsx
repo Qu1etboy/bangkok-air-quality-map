@@ -13,7 +13,7 @@ export default function Filter() {
   }
 
   return (
-    <form className="mx-3 mt-5">
+    <form className="mt-5">
       <label className="mb-2 mt-2 block text-sm font-medium text-gray-900">
         คุณภาพฝุ่น
       </label>
