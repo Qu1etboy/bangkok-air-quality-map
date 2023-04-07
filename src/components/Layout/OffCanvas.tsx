@@ -65,9 +65,10 @@ export default function OffCanvas() {
                 className="flex w-full gap-5 border-b px-3 py-5 text-sm"
                 onClick={() => handleSelected(station)}
               >
-                <div className="max-w-[100px]">
+                <div className="min-w-[100px] max-w-[100px]">
                   <img
                     src={`https://bangkokairquality.com/bma/${station.aqi_img}`}
+                    className="w-full"
                     alt={station.aqi_text}
                   />
                   <p className="text-center font-bold">{station.aqi_text}</p>
