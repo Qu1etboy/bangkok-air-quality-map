@@ -15,6 +15,7 @@
 
 .animate-progress {
   animation: progress 2s linear infinite;
+  z-index: -1;
 }
 
 @keyframes progress {
