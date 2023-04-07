@@ -1,5 +1,7 @@
 export function getColor(text: string) {
   switch (text) {
+    case "คุณภาพดีมาก":
+      return "text-blue-500";
     case "คุณภาพดี":
       return "text-green-500";
     case "ปานกลาง":
@@ -9,6 +11,6 @@ export function getColor(text: string) {
     case "มีผลกระทบต่อสุขภาพ":
       return "text-red-500";
     default:
-      return "text-blue-500";
+      return "";
   }
 }

@@ -4,7 +4,6 @@ import "leaflet/dist/leaflet.css";
 import StationsProvider from "@/contexts/Stations";
 import { Prompt } from "next/font/google";
 
-// If loading a variable font, you don't need to specify the font weight
 const prompt = Prompt({
   weight: ["400", "700"],
   style: ["normal"],
