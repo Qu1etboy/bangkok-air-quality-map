@@ -1,6 +1,6 @@
-import { useStationsContext } from "@/contexts/Stations";
+import { useStationsContext } from "@/common/contexts/Stations";
 import { useState } from "react";
-import SearchInput from "../Form/SearchInput";
+import SearchInput from "./Form/SearchInput";
 import OffCanvas from "./OffCanvas";
 
 export default function Header() {

@@ -1,4 +1,4 @@
-import { AQIIndex } from "@/types/aqi";
+import { AQIIndex } from "@/common/types/aqi";
 import axios from "axios";
 import { useEffect, useState } from "react";
 

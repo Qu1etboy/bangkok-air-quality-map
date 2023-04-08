@@ -1,8 +1,14 @@
 import L from "leaflet";
 
-export const blueIcon = L.icon({
-  iconUrl: "/images/marker-icon.png",
-  iconAnchor: [17, 46],
+export const blueIcon = new L.Icon({
+  iconUrl:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
 });
 
 export const greenIcon = new L.Icon({
@@ -59,20 +65,3 @@ export const blackIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-
-export function getIcon(text: string) {
-  switch (text) {
-    case "คุณภาพดีมาก":
-      return blueIcon;
-    case "คุณภาพดี":
-      return greenIcon;
-    case "ปานกลาง":
-      return yellowIcon;
-    case "เริ่มมีผลกระทบต่อสุขภาพ":
-      return orangeIcon;
-    case "มีผลกระทบต่อสุขภาพ":
-      return redIcon;
-    default:
-      return blackIcon;
-  }
-}

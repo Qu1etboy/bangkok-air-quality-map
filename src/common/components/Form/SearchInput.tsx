@@ -1,4 +1,4 @@
-import { useStationsContext } from "@/contexts/Stations";
+import { useStationsContext } from "@/common/contexts/Stations";
 
 export default function SearchInput() {
   const { setText } = useStationsContext();

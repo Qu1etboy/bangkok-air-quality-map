@@ -1,6 +1,6 @@
-import Map from "../components/Map";
-import Layout from "../components/Layout";
-import Header from "@/components/Layout/Header";
+import Header from "@/common/components/Header";
+import Layout from "@/common/components/Layout";
+import Map from "@/modules/Map";
 
 export default function Home() {
   return (

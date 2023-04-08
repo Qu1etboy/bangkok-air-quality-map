@@ -1,4 +1,4 @@
-import { useStationsContext } from "@/contexts/Stations";
+import { useStationsContext } from "@/common/contexts/Stations";
 
 export default function Filter() {
   const { quality, groupId, setQuality, setGroupId } = useStationsContext();

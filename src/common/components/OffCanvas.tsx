@@ -1,7 +1,7 @@
-import { useStationsContext } from "@/contexts/Stations";
-import Filter from "../Form/Filter";
-import SearchInput from "../Form/SearchInput";
-import StationsList from "./StationsList";
+import { useStationsContext } from "@/common/contexts/Stations";
+import Filter from "./Form/Filter";
+import SearchInput from "./Form/SearchInput";
+import StationsList from "./StationList";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function OffCanvas({

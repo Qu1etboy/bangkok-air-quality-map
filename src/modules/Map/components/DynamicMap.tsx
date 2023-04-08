@@ -1,9 +1,9 @@
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
-import { TStationContext } from "@/types/aqi";
-import { getIcon } from "./Icons";
-import { getColor } from "@/services/aqi";
-import { formatDate } from "@/services/date";
-import { useStationsContext } from "@/contexts/Stations";
+import { TStationContext } from "@/common/types/aqi";
+import { getIcon } from "../utils/getIcon";
+import { getColor } from "@/common/utils/aqi";
+import { formatDate } from "@/common/utils/date";
+import { useStationsContext } from "@/common/contexts/Stations";
 import { useEffect } from "react";
 
 export default function Map() {

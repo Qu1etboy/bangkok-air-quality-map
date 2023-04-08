@@ -1,5 +1,5 @@
-import { useAQI } from "@/hooks/useAQI";
-import { AQIIndex, TStationContext } from "@/types/aqi";
+import { useAQI } from "@/common/hooks/useAQI";
+import { AQIIndex, TStationContext } from "@/common/types/aqi";
 import { useContext, createContext, useState, useEffect } from "react";
 
 const StationsContext = createContext<TStationContext | null>(null);
