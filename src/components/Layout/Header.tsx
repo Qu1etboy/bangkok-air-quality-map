@@ -1,11 +1,10 @@
 import { useStationsContext } from "@/contexts/Stations";
-import { TStationContext } from "@/types/aqi";
 import { useState } from "react";
 import SearchInput from "../Form/SearchInput";
 import OffCanvas from "./OffCanvas";
 
 export default function Header() {
-  const { isLoading } = useStationsContext() as TStationContext;
+  const { isLoading } = useStationsContext();
   const [isOpen, setOpen] = useState(false);
 
   return (

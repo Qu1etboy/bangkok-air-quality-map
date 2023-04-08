@@ -1,9 +1,7 @@
 import { useStationsContext } from "@/contexts/Stations";
-import { TStationContext } from "@/types/aqi";
 
 export default function Filter() {
-  const { quality, groupId, setQuality, setGroupId } =
-    useStationsContext() as TStationContext;
+  const { quality, groupId, setQuality, setGroupId } = useStationsContext();
 
   function handleSelectQuality(e: React.ChangeEvent<HTMLSelectElement>) {
     setQuality(e.target.value);

@@ -1,8 +1,7 @@
 import { useStationsContext } from "@/contexts/Stations";
-import { TStationContext } from "@/types/aqi";
 
 export default function SearchInput() {
-  const { setText } = useStationsContext() as TStationContext;
+  const { setText } = useStationsContext();
 
   function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();

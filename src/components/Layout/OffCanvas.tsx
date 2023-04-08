@@ -1,5 +1,4 @@
 import { useStationsContext } from "@/contexts/Stations";
-import { TStationContext } from "@/types/aqi";
 import Filter from "../Form/Filter";
 import SearchInput from "../Form/SearchInput";
 import StationsList from "./StationsList";
@@ -12,7 +11,7 @@ export default function OffCanvas({
   isOpen: boolean;
   setOpen: (isOpen: boolean) => void;
 }) {
-  const { stations } = useStationsContext() as TStationContext;
+  const { stations } = useStationsContext();
 
   return (
     <AnimatePresence>

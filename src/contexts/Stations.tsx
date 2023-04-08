@@ -4,7 +4,8 @@ import { useContext, createContext, useState, useEffect } from "react";
 
 const StationsContext = createContext<TStationContext | null>(null);
 
-export const useStationsContext = () => useContext(StationsContext);
+export const useStationsContext = () =>
+  useContext(StationsContext) as TStationContext;
 
 export default function StationsProvider({
   children,

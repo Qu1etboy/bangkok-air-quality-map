@@ -1,5 +1,5 @@
 import { useStationsContext } from "@/contexts/Stations";
-import { AQIIndex, TStationContext } from "@/types/aqi";
+import { AQIIndex } from "@/types/aqi";
 import Loading from "./Loading";
 import Error from "./Error";
 import { formatDate } from "@/services/date";
@@ -7,7 +7,7 @@ import { getColor } from "@/services/aqi";
 
 export default function StationsList() {
   const { stations, isLoading, isError, setSelectedStation } =
-    useStationsContext() as TStationContext;
+    useStationsContext();
 
   function handleSelected(station: AQIIndex) {
     setSelectedStation(station);
