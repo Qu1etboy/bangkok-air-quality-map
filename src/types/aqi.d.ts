@@ -39,6 +39,9 @@ export interface TStationContext {
   setSelectedStation: (station: AQIIndex) => void;
   handleFilterStation: (filterer: (station: AQIIndex) => boolean) => void;
   // use for filtering
+  quality: string;
+  groupId: string;
+  text: string;
   setQuality: (quatity: string) => void;
   setGroupId: (groupId: string) => void;
   setText: (text: string) => void;

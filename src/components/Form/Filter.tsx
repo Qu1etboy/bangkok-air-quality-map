@@ -2,7 +2,8 @@ import { useStationsContext } from "@/contexts/Stations";
 import { TStationContext } from "@/types/aqi";
 
 export default function Filter() {
-  const { setQuality, setGroupId } = useStationsContext() as TStationContext;
+  const { quality, groupId, setQuality, setGroupId } =
+    useStationsContext() as TStationContext;
 
   function handleSelectQuality(e: React.ChangeEvent<HTMLSelectElement>) {
     setQuality(e.target.value);
@@ -19,6 +20,7 @@ export default function Filter() {
       </label>
       <select
         onChange={handleSelectQuality}
+        defaultValue={quality}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
       >
         <option value="ทั้งหมด">ทั้งหมด</option>
@@ -33,6 +35,7 @@ export default function Filter() {
       </label>
       <select
         onChange={handleSelectGroup}
+        defaultValue={groupId}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
       >
         <option value="0">All District</option>

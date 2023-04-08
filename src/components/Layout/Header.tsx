@@ -36,7 +36,7 @@ export default function Header() {
           <SearchInput />
         </section>
       </header>
-      {isOpen && <OffCanvas setOpen={setOpen} />}
+      <OffCanvas isOpen={isOpen} setOpen={setOpen} />
       {isLoading && (
         <div className="h-1 w-full overflow-hidden bg-gray-200">
           <div className="animate-progress h-full bg-gradient-to-r from-green-500 to-green-700"></div>
