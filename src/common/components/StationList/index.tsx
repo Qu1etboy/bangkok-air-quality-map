@@ -18,7 +18,7 @@ export default function StationsList() {
   return (
     <>
       {stations.map((station) => (
-        <Station station={station} />
+        <Station key={crypto.randomUUID()} station={station} />
       ))}
     </>
   );

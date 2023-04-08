@@ -12,7 +12,6 @@ export default function Station({ station }: { station: AQIIndex }) {
 
   return (
     <button
-      key={crypto.randomUUID()}
       className="flex w-full gap-5 border-b px-3 py-5 text-sm"
       onClick={() => handleSelected(station)}
     >
