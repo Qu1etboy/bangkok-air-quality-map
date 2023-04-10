@@ -19,7 +19,7 @@ export default function Map() {
     >
       <ZoomTo />
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Made with 🖤 by <a href="https://qu1etboy.dev">Qu1etboy</a>'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | Made with 🖤 by <a href="https://qu1etboy.dev">Qu1etboy</a> | <a href="https://github.com/qu1etboy/bangkok-air-quality-map">GitHub</a> | Data from <a href="https://bangkokairquality.com/bma/">BangkokAirQuality</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <>
