@@ -1,3 +1,5 @@
+import { MutableRefObject } from "react";
+
 export interface AQIIndex {
   Name: string;
   district_name: string;
@@ -45,4 +47,5 @@ export interface TStationContext {
   setQuality: (quatity: string) => void;
   setGroupId: (groupId: string) => void;
   setText: (text: string) => void;
+  searchInputRef: MutableRefObject<HTMLInputElement | null>;
 }

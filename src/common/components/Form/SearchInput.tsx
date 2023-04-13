@@ -1,7 +1,7 @@
 import { useStationsContext } from "@/common/contexts/Stations";
 
 export default function SearchInput() {
-  const { setText } = useStationsContext();
+  const { setText, searchInputRef } = useStationsContext();
 
   function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
@@ -38,6 +38,7 @@ export default function SearchInput() {
           name="text"
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
           placeholder="ค้นหาตามเขต..."
+          ref={searchInputRef}
         />
       </div>
       <button className="ml-2 rounded-lg border border-green-700 bg-green-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300">

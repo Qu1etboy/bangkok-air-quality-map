@@ -1,6 +1,7 @@
 import { useAQI } from "@/common/hooks/useAQI";
 import { AQIIndex, TStationContext } from "@/common/types/aqi";
 import { useContext, createContext, useState, useEffect } from "react";
+import { useRef } from "react";
 
 const StationsContext = createContext<TStationContext | null>(null);
 
@@ -21,6 +22,7 @@ export default function StationsProvider({
   const [quality, setQuality] = useState("ทั้งหมด");
   const [groupId, setGroupId] = useState("0");
   const [text, setText] = useState("");
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
 
   function handleFilterStation(filterer: (station: AQIIndex) => boolean) {
     setFilteredStations(stations.filter((station) => filterer(station)));
@@ -56,6 +58,7 @@ export default function StationsProvider({
         setQuality,
         setGroupId,
         setText,
+        searchInputRef,
       }}
     >
       {children}

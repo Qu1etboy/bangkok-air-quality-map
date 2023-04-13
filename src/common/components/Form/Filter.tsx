@@ -18,6 +18,7 @@ export default function Filter() {
       </label>
       <select
         onChange={handleSelectQuality}
+        value={quality}
         defaultValue={quality}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
       >
@@ -33,6 +34,7 @@ export default function Filter() {
       </label>
       <select
         onChange={handleSelectGroup}
+        value={groupId}
         defaultValue={groupId}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
       >

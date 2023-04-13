@@ -11,7 +11,19 @@ export default function OffCanvas({
   isOpen: boolean;
   setOpen: (isOpen: boolean) => void;
 }) {
-  const { stations } = useStationsContext();
+  const { stations, setQuality, setGroupId, setText, searchInputRef } =
+    useStationsContext();
+
+  function handleResetFilter() {
+    // reset to default
+    setQuality("ทั้งหมด");
+    setGroupId("0");
+    setText(""); // reset in list
+
+    if (searchInputRef.current) {
+      searchInputRef.current.value = ""; // clear an input field
+    }
+  }
 
   return (
     <AnimatePresence>
@@ -46,6 +58,12 @@ export default function OffCanvas({
             <section className="mx-3 border-b pb-2">
               <SearchInput />
               <Filter />
+              <button
+                className="mt-3 text-sm underline duration-200 hover:text-green-600"
+                onClick={handleResetFilter}
+              >
+                ล้างการค้นหา
+              </button>
               <p className="mt-5">ทั้งหมด {stations.length} สถานี</p>
             </section>
             <StationsList />
